@@ -1,0 +1,93 @@
+<div class="container">
+    <div class="col-md-12">
+        <div class="text-center mt-20">
+            <img id="users-img" src="../../../assets/users.png" alt="etiqa logo">
+        </div>
+        <form [formGroup]="SignupForm" (ngSubmit)="onSubmitForm()">
+            <p class="txt-head"><span class="txt-yellow">Add New Users</span></p>
+            <div class="row">
+                <div class="col-sm-12">
+                
+                        <label for="first">Username</label>
+                        <input type="text" class="form-control" placeholder="Insert your username" id="username"
+                            formControlName="username">
+                
+                </div>
+                
+            </div>
+
+            <div class="row">
+                <br>
+                <div class="col-sm-12">
+                        <label for="last">Email Address</label>
+                        <input type="email" class="form-control" placeholder="Insert your email address" id="email"
+                            formControlName="email">
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                        <label for="company">Phone Number</label>
+                        <input type="number" class="form-control" placeholder="Insert your Phone Number" id="phone"
+                            formControlName="phone">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-11">
+                    <div formArrayName="hobbies">
+                        <button class="btn btn-hobby btn-default" type="button" (click)="onAddHobby()"><i class="fa fa-plus"></i>
+                            Hobby</button>
+                        <div class="form-group row" *ngFor="let hobbyControl of func_hobby(); let i=index">
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="hobbies" [formControlName]="i">
+                            </div>
+                            <div class="col-md-2">
+                           
+                            <img (click)="deleteHobby(i)" src="../../assets/actions-trash.png" class="img-icon trash" data-toggle="tooltip" data-placement="bottom" title="Delete hobby">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div formArrayName="skills">
+                        <button class="btn btn-hobby btn-default" type="button" (click)="onAddSKill()"><i class="fa fa-plus"></i>
+                            Skill</button>
+                    
+                        <div class="form-group row" *ngFor="let hobbyControl of func_skill(); let i=index">
+                            <div class="col-md-10">
+                                <input type="text" class="form-control" id="skills" [formControlName]="i">
+                            </div>
+                            <div class="col-md-2">
+                           
+                            <img (click)="deleteSkill(i)" src="../../assets/actions-trash.png" class="img-icon trash" data-toggle="tooltip" data-placement="bottom" title="Delete hobby">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mb-20">
+
+                <div class="col-sm-12">
+
+                    <button type="submit" class="btn btn-submit w-100">Create User</button>
+                </div>
+                
+            </div>
+            <div class="row mb-20">
+                <div class="col-sm-12">
+                    <button type="button" class="btn btn-cancel w-100" (click)="closeModal()">Cancel</button>
+
+                </div>
+            </div>
+
+        </form>
+
+
+        <!-- {{this.SignupForm.value | json}} -->
+    </div>
+    
+</div>

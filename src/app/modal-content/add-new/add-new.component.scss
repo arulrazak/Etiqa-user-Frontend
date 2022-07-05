@@ -1,0 +1,53 @@
+.txt-head {
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    color: #a6a6a6;
+
+    .txt-yellow {
+        color: #ffbf00;
+    }
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.bg-img {
+    background-color: #ffbf00;
+    text-align: center;
+}
+.btn-hobby {
+    border: 2px solid #82868b;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}
+.center {
+    /* display: block; */
+    margin-left: auto;
+    margin-right: auto;
+    /* width: 50%; */
+    margin-top: 50%;
+}
+
+label {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 15px;
+    color: #9e9e9e;
+}
+
+.img-icon {
+    width: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+#users-img{
+    width:100px;
+    height: auto;
+}

@@ -1,0 +1,107 @@
+@font-face {
+    font-family: Lato-Regular;
+    src: url("../../assets/fonts/Lato/Lato-Regular.ttf ");
+}
+@font-face {
+    font-family: Lato-Bold;
+    src: url("../../assets/fonts/Lato/Lato-Bold.ttf ");
+}
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+.table {
+    border-radius: 20px;
+    font-size: 13px;
+}
+thead {
+    position: sticky;
+    border-radius: 5px;
+    border-top: 0px !important;
+    background: #f3f2f7;
+}
+table th {
+    border: 0px;
+}
+.fa-trash:hover {
+    color: red;
+}
+.fa-edit:hover {
+    color: green;
+}
+.has-search {
+    margin-bottom: 0px !important;
+}
+.search-img {
+    width: 20px;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
+
+.btn-add {
+    background: forestgreen;
+    width: 128.05px;
+    height: 36.03px;
+    border-radius: 30px;
+    color: #ffff;
+    margin-left: 10px;
+    font-size: 12px;
+}
+.btn-add img {
+    margin-top: -2px;
+    margin-right: 3px;
+}
+
+@media screen and (max-width: 575px) {
+    .table-xs-responsive th,
+    .table-xs-responsive td {
+        width: 100% !important;
+        display: block !important;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .table.table-sm-responsive th,
+    .table.table-sm-responsive td {
+        width: 100% !important;
+        display: block !important;
+        box-sizing: border-box;
+    }
+    .btn-add {
+        width: 100% !important;
+        margin: 0px !important;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .table.table-sm-responsive th,
+    .table.table-sm-responsive td {
+        width: 100% !important;
+        display: block !important;
+        box-sizing: border-box;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .table.table-sm-responsive th,
+    .table.table-sm-responsive td {
+        width: 100% !important;
+        display: block !important;
+        box-sizing: border-box;
+    }
+}
+.btn-hobby{
+    border: 2px solid #82868B;
+    margin-bottom: 10px;
+    border-radius: 5px;
+}

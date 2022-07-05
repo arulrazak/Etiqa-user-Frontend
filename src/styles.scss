@@ -1,0 +1,48 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "~bootstrap/scss/bootstrap";
+.fa {
+    cursor: pointer;
+}
+.p-10 {
+    padding: 10px;
+}
+.mb-10 {
+    margin-bottom: 10px;
+}
+
+.m-4 {
+    margin: 4px !important;
+}
+.mr-10 {
+    margin-right: 10px;
+}
+.mt-10 {
+    margin-top: 10px;
+}
+.radius- {
+    border-radius: 1.5rem;
+}
+.radius-5 {
+    border-radius: 7px;
+}
+.box-sh {
+    box-shadow: 0 4px 20px #0000001a;
+}
+
+.btn-submit {
+    color: white;
+    background: #ffbf00;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+.btn-cancel {
+    color: white;
+    background: #ccc;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 14px;
+}
