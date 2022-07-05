@@ -23,15 +23,15 @@ export class HomeComponent implements OnInit {
 
 
   public editProfileForm = new FormGroup({
-    username: new FormControl(''),
-    email: new FormControl(''),
-    phone: new FormControl(''),
+    username: new FormControl('', [Validators.required]),
+    email: new FormControl('',[Validators.required]),
+    phone: new FormControl('',[Validators.required]),
     skills: new FormArray([
-      new FormControl(''),
-      new FormControl(''),
+      new FormControl('',[Validators.required]),
+      new FormControl('',[Validators.required]),
     ]),
     hobbies: new FormArray([
-      new FormControl(''), new FormControl(''),
+      new FormControl('',[Validators.required]), new FormControl('',[Validators.required]),
 
     ])
   });
@@ -88,6 +88,9 @@ export class HomeComponent implements OnInit {
   }
 
   async onSubmitEdit() {
+    if(this.editProfileForm.invalid){
+      this.toastr.warning("Please complete form")
+    }else{
     const data = this.editProfileForm.getRawValue();
     console.log('data', data);
     
@@ -101,7 +104,7 @@ export class HomeComponent implements OnInit {
     
     this.toastr.success('Successfully Edit');
     this.modalService.dismissAll();
-
+  }
   }
 
   onAddHobby() {

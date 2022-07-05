@@ -16,14 +16,14 @@ import { Observable } from 'rxjs';
 export class AddNewComponent implements OnInit {
 
   public SignupForm = new FormGroup({
-    username: new FormControl(''),
-    email: new FormControl(''),
-    phone: new FormControl(''),
-    skills: new FormArray([]),
-    hobbies: new FormArray([])
+    username: new FormControl('',[Validators.required]),
+    email: new FormControl('',[Validators.required]),
+    phone: new FormControl('',[Validators.required]),
+    skills: new FormArray([],[Validators.required]),
+    hobbies: new FormArray([],[Validators.required])
   });
 
-  constructor(private aModalService: NgbActiveModal, private formBuilder: FormBuilder, private api: ApiService) { }
+  constructor(private aModalService: NgbActiveModal, private formBuilder: FormBuilder, private api: ApiService,public Toastr:ToastrService) { }
 
  
   ngOnInit(): void {
@@ -67,6 +67,9 @@ export class AddNewComponent implements OnInit {
   }
 
   async onSubmitForm() {
+    if(this.SignupForm.invalid){
+      this.Toastr.error("Please complete the form")
+    }else{
     const data = this.SignupForm.getRawValue();
     console.log("data before submit", data);
 
@@ -89,6 +92,7 @@ export class AddNewComponent implements OnInit {
     // this.api.createUser(data).subscribe(() => {
     // 
     // });
+    }
   }
   triggerEvent(item: string) {
    
