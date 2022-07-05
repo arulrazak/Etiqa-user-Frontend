@@ -26,11 +26,11 @@ export class HomeComponent implements OnInit {
     username: new FormControl(''),
     email: new FormControl(''),
     phone: new FormControl(''),
-    skill: new FormArray([
+    skills: new FormArray([
       new FormControl(''),
       new FormControl(''),
     ]),
-    hobby: new FormArray([
+    hobbies: new FormArray([
       new FormControl(''), new FormControl(''),
 
     ])
@@ -58,7 +58,7 @@ export class HomeComponent implements OnInit {
     this.modalService.open(targetModal, {
       centered: true,
       backdrop: 'static',
-      size: 'lg'
+      size: 'md'
     });
     console.log("user", user);
 
@@ -69,8 +69,8 @@ export class HomeComponent implements OnInit {
       username: user.username,
       email: user.email,
       phone: user.phone,
-      skill: user.skills,
-      hobby: user.hobbies,
+      skills: user.skills,
+      hobbies: user.hobbies,
 
 
       // hobby: (<FormArray>this.editProfileForm.get("hobby")?.value)
@@ -106,24 +106,23 @@ export class HomeComponent implements OnInit {
 
   onAddHobby() {
     const control = new FormControl(null, Validators.required);
-    (<FormArray>this.editProfileForm.get('hobby')).push(control);
+    (<FormArray>this.editProfileForm.get('hobbies')).push(control);
   }
 
   funcHobby() {
-    return (this.editProfileForm.get('hobby') as FormArray).controls;
+    return (this.editProfileForm.get('hobbies') as FormArray).controls;
   }
 
   deleteHobby(item: any) {
     console.log("item", item);
     console.log(this.editProfileForm.get('hobby'));
-    (this.editProfileForm.get('hobby') as FormArray).controls.splice(item, 1);
+    (this.editProfileForm.get('hobbies') as FormArray).controls.splice(item, 1);
   }
 
   deleteMission(item: any) {
-    console.log("Delete Mission ID :", item);
     Swal.fire({
-      title: 'Are you sure?',
-      text: 'You will not be able to recover this  record again! ',
+      title: 'Confirm Delete?',
+      text: 'Data will  ',
       icon: 'warning',
 
       showCancelButton: true,
@@ -158,17 +157,17 @@ export class HomeComponent implements OnInit {
 
   onAddSKill() {
     const control = new FormControl(null, Validators.required);
-    (<FormArray>this.editProfileForm.get('skill')).push(control);
+    (<FormArray>this.editProfileForm.get('skills')).push(control);
   }
 
   deleteSkill(item: any) {
     // console.log("item", item);
     // console.log(this.SignupForm.get('skill'));
-    (this.editProfileForm.get('skill') as FormArray).controls.splice(item, 1);
+    (this.editProfileForm.get('skills') as FormArray).controls.splice(item, 1);
   }
 
   funcSkill() {
-    return (this.editProfileForm.get('skill') as FormArray).controls;
+    return (this.editProfileForm.get('skills') as FormArray).controls;
   }
 
 }

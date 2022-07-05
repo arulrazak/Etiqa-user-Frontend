@@ -62,13 +62,14 @@
     <div class="modal-body">
         <form [formGroup]="editProfileForm" (ngSubmit)="onSubmitEdit()">
             <div class="row">
-                <div class="col-md-6">
-                    <div class="form-group">
+                <div class="col-sm-12">
                         <label for="first">Username</label>
                         <input type="text" class="form-control" placeholder="" id="username" formControlName="username">
-                    </div>
                 </div>
-                <div class="col-md-6">
+                
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
                     <div class="form-group">
                         <label for="last">Email Address</label>
                         <input type="email" class="form-control" placeholder="" id="email" formControlName="email">
@@ -76,7 +77,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-sm-12">
                     <div class="form-group">
                         <label for="first">Phone Number</label>
                         <input type="text" class="form-control" placeholder="" id="phone" formControlName="phone">
@@ -88,8 +89,8 @@
 
             <div class="row">
 
-                <div class="col-md-6">
-                    <div formArrayName="hobby">
+                <div class="col-sm-12">
+                    <div formArrayName="hobbies">
                         <button class="btn btn-hobby btn-default" type="button" (click)="onAddHobby()">Add
                             Hobby</button>
 
@@ -104,8 +105,11 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6">
-                    <div formArrayName="skill">
+                
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <div formArrayName="skills">
                         <button class="btn btn-hobby btn-default" type="button" (click)="onAddSKill()">Add
                             Skill</button>
 
@@ -122,10 +126,13 @@
                 </div>
             </div>
             <div class="row mb-20">
-                <div class="col-md-6">
+                <div class="col-sm-12">
                     <button type="submit" class="btn btn-submit w-100">Edit Account</button>
                 </div>
-                <div class="col-md-6">
+              
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
                     <button type="button" class="btn btn-cancel w-100" (click)="modal.dismiss()">Cancel</button>
                 </div>
             </div>
