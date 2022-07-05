@@ -5,7 +5,7 @@
     color: #a6a6a6;
 
     .txt-yellow {
-        color: #ffbf00;
+        color: green;
     }
 }
 
@@ -18,7 +18,7 @@
 }
 
 .bg-img {
-    background-color: #ffbf00;
+    background-color: green;
     text-align: center;
 }
 .btn-hobby {
@@ -50,4 +50,13 @@ label {
 #users-img{
     width:100px;
     height: auto;
+}
+
+.btn-submit{
+    background-color: #343a40;
+    color: aliceblue;
+}
+.container-modal{
+    background-color: #ffe000;
+    padding: 20px 0px;
 }
