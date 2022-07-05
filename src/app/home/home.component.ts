@@ -125,7 +125,7 @@ export class HomeComponent implements OnInit {
   deleteMission(item: any) {
     Swal.fire({
       title: 'Confirm Delete?',
-      text: 'Data will  ',
+      text: 'Data will deleted permanently  ',
       icon: 'warning',
 
       showCancelButton: true,
